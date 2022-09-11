@@ -29,6 +29,8 @@ import CreateCard from "../Cards/CardUI";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import axios from "axios";
+import FormComponent from "../Components/Card_API/FormComponent";
 
 function App() {
   const [showModal, setShow] = useState(false);
@@ -47,17 +49,19 @@ function App() {
   }
   return (
     <>
-      <div>
-        <Button variant="primary" onClick={handleShow}>
+      <div className="button-div">
+        <Button variant="primary" onClick={handleShow}  >
           + Add Project
         </Button>
       </div>
 
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add Project</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <FormComponent />
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -68,11 +72,11 @@ function App() {
         </Modal.Footer>
       </Modal>
 
-      <React.Fragment>
+      {/* <React.Fragment>
         <Row>
           {items}
         </Row>
-      </React.Fragment>
+      </React.Fragment> */}
     </>
   );
 }

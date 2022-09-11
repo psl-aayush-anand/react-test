@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import ContainerFluidExample from './grid';
 import MyComponent from './Cards/MyComponent';
+import FluidComponent_API from './Components/Card_API/FluidComponent_API';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <FluidComponent_API />
   </React.StrictMode>
 );
 
