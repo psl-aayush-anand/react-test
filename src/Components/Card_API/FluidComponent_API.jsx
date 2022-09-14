@@ -7,7 +7,7 @@ const FluidComponent_API = () => {
     const [users, setUsers] = useState([]);
 
     const getUsers = async () => {
-        const response = await fetch(`https://mocki.io/v1/b51967f6-0aaa-415f-80a4-a517eb17e098`);
+        const response = await fetch(`http://localhost:8000/projects/`);
         //console.log(response);
         setUsers(await response.json());
     }
@@ -27,11 +27,11 @@ const FluidComponent_API = () => {
             <Card className="card__style"
                 style={{ cursor: "pointer", width: "15rem",margin: "0.8rem", border: "none",borderRadius: "16px" }}
             >
-                <Card.Img variant="top" src={curElem.avatar_url} />
+                {/* <Card.Img variant="top" src={curElem.avatar_url} /> */}
                 <Card.Body>
-                    <Card.Title>{curElem.login}</Card.Title>
+                    <Card.Title>{curElem.project_name}</Card.Title>
                     <Card.Text>
-                        {curElem.id}
+                        {curElem.project_id}
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
