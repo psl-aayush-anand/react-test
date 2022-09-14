@@ -3,7 +3,7 @@ import axios,  {Axios} from "axios";
 import { Button } from "bootstrap";
 const FormComponent = () => {
 
-    const url = ""
+    const url = "" //modal entries
     const [data, setData] = useState({
         project_name: "",
         experiment_name: ""
@@ -39,7 +39,7 @@ const FormComponent = () => {
                 </div>
                 <div>
                     <input onChange={(e) => handle(e)} id="experiment_name" value={data.experiment_name} placeholder="Experiment Name" type="text"></input>
-                    <input type="submit"></input>
+                    <input type="submit"/>
                 </div>
             </form>
         </div>
