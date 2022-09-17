@@ -4,10 +4,16 @@ import React from 'react'
 import BasicCard from './BasicCard';
 import ProgressStepper from './ProgressStepper';
 import Form from './Form';
+import Navibar from './Navbar';
+import Sidebar from './Sidebar/Sidebar';
 
 const App = () => {
     return (
-            <><Form /></>
+            <>
+            <Navibar/>
+            <Sidebar/>
+            <Form />
+            </>
 
     )
 }
